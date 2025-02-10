@@ -76,7 +76,7 @@ observed_emotions = ['neutral', 'calm', 'happy', 'sad', 'angry', 'fearful', 'dis
 # Function to load the dataset
 def load_data(test_size=0.25, duration=2.5, sample_rate=22050):
     x, y = [], []
-    for file in glob.glob("dataset/**/*.wav", recursive=True):
+    for file in glob.glob("ravdess-dataset/**/*.wav", recursive=True):
         print(f"Processing {file}")
         file_name = os.path.basename(file)
         emotion = emotions[file_name.split("-")[2]]
